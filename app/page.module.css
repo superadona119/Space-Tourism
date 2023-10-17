@@ -1,0 +1,78 @@
+.main {
+  --grid-gap: 0;
+  min-height: 100vh;
+  grid-template-rows: min-content 1fr;
+  background-image: url(/assets/home/background-home-desktop.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.containerHome {
+  align-items: end;
+}
+
+.intro {
+  grid-column: 2;
+  --flex-gap: 1.5rem;
+  flex-direction: column;
+}
+
+.btnExplore {
+  display: grid;
+  place-items: center;
+  width: 274px;
+  height: 274px;
+  border-radius: 50%;
+  background-color: hsl(var(--clr-neutral-100));
+  color: hsl(var(--clr-neutral-900));
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  outline: 0 solid hsl(var(--clr-neutral-100) / 0.15);
+  transition: all 300ms ease-out;
+}
+
+.btnExplore:hover {
+  outline-width: 88px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    background-image: url(/assets/home/background-home-tablet.jpg);
+  }
+
+  .containerHome {
+    grid-template-columns: auto;
+    padding-top: 2rem;
+    row-gap: 2rem;
+  }
+
+  .intro {
+    grid-column: auto;
+  }
+
+  .btnExplore {
+    width: 242px;
+    height: 242px;
+  }
+
+  .btnExplore:hover {
+    outline-width: 77px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main {
+    background-image: url(/assets/home/background-home-mobile.jpg);
+  }
+
+  .btnExplore {
+    font-size: 1.25rem;
+    width: 150px;
+    height: 150px;
+  }
+  .btnExplore:hover {
+    outline-width: 47px;
+  }
+}
